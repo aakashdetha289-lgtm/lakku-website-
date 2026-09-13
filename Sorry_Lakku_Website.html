@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Lakku 💗</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0;font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#ffe6ef,#f7e8ff,#e5f3ff);
+    min-height:100vh;color:#4a2940;overflow-x:hidden;
+  }
+  .page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px}
+  .card{
+    width:min(560px,100%);background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);
+    border-radius:28px;padding:28px 22px;box-shadow:0 18px 55px rgba(112,64,105,.18);
+    text-align:center;position:relative;overflow:hidden;
+  }
+  .heart{position:absolute;font-size:22px;animation:float 4s infinite ease-in-out;opacity:.65}
+  .h1{top:20px;left:22px}.h2{top:65px;right:25px}.h3{bottom:20px;left:45px}.h4{bottom:55px;right:40px}
+  @keyframes float{50%{transform:translateY(-12px) rotate(8deg)}}
+  h1{font-size:28px;margin:6px 0 10px;color:#d44f82}
+  .subtitle{font-size:15px;line-height:1.6;margin:0 auto 18px;max-width:460px}
+  .photo{
+    width:180px;height:180px;margin:8px auto 18px;border-radius:50%;
+    border:6px solid #fff;box-shadow:0 10px 28px rgba(212,79,130,.22);
+    overflow:hidden;background:linear-gradient(145deg,#ffd3e2,#e8d6ff);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;display:none}
+  .placeholder{font-size:64px}
+  .guilt{
+    display:inline-block;font-size:55px;animation:sad 1.5s infinite ease-in-out;
+    filter:drop-shadow(0 7px 7px rgba(0,0,0,.08));
+  }
+  @keyframes sad{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(7px) rotate(3deg)}}
+  .tears{font-size:18px;position:relative;top:-9px}
+  .message{
+    background:#fff4f8;border-radius:20px;padding:18px;line-height:1.65;
+    font-size:16px;margin:14px 0 22px;
+  }
+  button{
+    border:0;border-radius:999px;padding:13px 22px;font-size:16px;font-weight:700;
+    cursor:pointer;transition:.2s;box-shadow:0 7px 18px rgba(70,40,70,.12);
+  }
+  button:hover{transform:translateY(-2px)}
+  .yes{background:#e85d91;color:#fff}.no{background:#eee6ef;color:#5a4656}
+  .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .hidden{display:none !important}
+  .modal{
+    position:fixed;inset:0;background:rgba(58,32,52,.38);display:flex;
+    align-items:center;justify-content:center;padding:20px;z-index:10;
+  }
+  .modalbox{
+    width:min(390px,100%);background:#fff;border-radius:26px;padding:28px;
+    text-align:center;box-shadow:0 20px 70px rgba(0,0,0,.2);animation:pop .25s ease-out;
+  }
+  @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+  .modalbox .emoji{font-size:50px}
+  .modalbox p{font-size:18px;line-height:1.55}
+  .continue{background:#d9578a;color:#fff;width:100%}
+  .longtext{text-align:left;line-height:1.75;font-size:16px;white-space:pre-line}
+  .back{background:#eee6ef;color:#554052;margin-top:16px}
+  .tiny{font-size:12px;color:#907687;margin-top:15px}
+</style>
+</head>
+<body>
+
+<section id="tab1" class="page">
+  <div class="card">
+    <span class="heart h1">💗</span><span class="heart h2">💕</span>
+    <span class="heart h3">💞</span><span class="heart h4">🌸</span>
+    <h1>Lakku, ek minute sun na 🥺</h1>
+
+    <div class="photo" id="photoBox">
+      <!-- Sister's photo can be added here later -->
+      <div class="placeholder">👧🏻</div>
+    </div>
+
+    <div class="guilt">🥺</div><div class="tears">💧💧</div>
+
+    <div class="message">
+      Mujhe pta h ki mene tumhe block krke galat kia 🥺<br>
+      Abhi ke liye meri baat sun lo meri pyaari behen <b>Lakku</b> 💗<br>
+      <small>{ chota Don }</small>
+    </div>
+
+    <div class="buttons">
+      <button class="yes" onclick="showMessage()">Haan bolo 💗</button>
+      <button class="no" onclick="showModal()">Nhi sunni 😤</button>
+    </div>
+    <div class="tiny">Ek baar meri baat sun lena, phir jo tumhari marzi ❤️</div>
+  </div>
+</section>
+
+<section id="tab2" class="page hidden">
+  <div class="card">
+    <span class="heart h1">💗</span><span class="heart h2">🌷</span>
+    <h1>Lakku ❤️</h1>
+    <div class="message longtext">I know lakshita (lakku/ meri pyari behen) ki mene tujhe us din bss gusse me block kr dia. Mujhe pta ni chalta ki me gusse me kya kr deta hu. Isi gusse kr karan mere kafi rishte katam hue h 🙂 aur mujhe realise usi time ho gya tha.
+
+But fir tune ne mujhe block kr dia aur mera break up bhi ho gya h, to kafi time se bss akela hu me. Kisi ko kuch ni manta ab mere liye, butt yrr mujhe regret hora h ki mene tujhse uhi bina kisi vajah ke rista katam kr dia kyuki tu meri sabse achi aur pyari behen h aur utni bhi achi dost. Tune mujhe mere har bure time me sath dia. Me hi pagal hu jo esa sab kr betha hu.
+
+Please yrrrrrrr I really soryyyyyyyyyyyy 🥺❤️</div>
+    <button class="back" onclick="goBack()">← Wapas</button>
+  </div>
+</section>
+
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modalbox">
+    <div class="emoji">🥺💗</div>
+    <p><b>Please ek baar meri baat sun lo.</b><br>Baki aage tumhari marzi ❤️</p>
+    <button class="continue" onclick="closeAndShow()">Theek h, bolo 💗</button>
+  </div>
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById('tab1').classList.add('hidden');
+  document.getElementById('tab2').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+function showModal(){const m=document.getElementById('modal');m.classList.remove('hidden');m.setAttribute('aria-hidden','false')}
+function closeAndShow(){
+  document.getElementById('modal').classList.add('hidden');
+  document.getElementById('modal').setAttribute('aria-hidden','true');
+  showMessage();
+}
+function goBack(){
+  document.getElementById('tab2').classList.add('hidden');
+  document.getElementById('tab1').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
